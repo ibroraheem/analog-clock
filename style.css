@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1e1f26;
+
+}
+
+.title{
+  color: #ffffff;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 35px;
+  text-align: center;
+}
+
+.clock {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./clock.png);
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 0 -15px 15px rgb(255 255 255 / 5%),
+    inset 0 -15px 15px rgb(255 255 255 / 5%), 0 15px 15px rgb(0 0 0 / 30%),
+    inset 0 15px 15px rgb(0 0 0 / 30%);
+}
+.clock::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 10000;
+}
+
+.clock .hour,
+.clock .minute,
+.clock .second {
+  position: absolute;
+}
+.clock .hour,
+.hr {
+  width: 160px;
+  height: 160px;
+}
+.clock .minute,
+.min {
+  width: 200px;
+  height: 200px;
+}
+.clock .second,
+.sec {
+  width: 230px;
+  height: 230px;
+}
+.hr,
+.min,
+.sec {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.hr:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 80px;
+  background: #ffffff;
+  z-index: 10;
+  border-radius: 6px 6px 0 0;
+}
+.min:before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 90px;
+  background: #ffffff;
+  z-index: 11;
+  border-radius: 6px 6px 0 0;
+}
+.sec:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background: rgba(255, 0, 0);
+  z-index: 12;
+  border-radius: 6px 6px 0 0;
+}
+.light{
+    background-color: #ffffff;
+}
+
+.hr:before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: gray;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+  }
+  .min:before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background: gray;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+  }
+
+  button{
+    width: 150px;
+    height: 50px;
+    background-color: inherit;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    margin-top: 10px;
+  }
